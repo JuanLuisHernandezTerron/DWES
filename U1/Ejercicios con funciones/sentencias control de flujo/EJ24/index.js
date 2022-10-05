@@ -6,10 +6,27 @@
 
 var salarioInicial = 50;
 
-while(salarioInicial != 0){
-    function add(){
-        let numeroRandom = Number(1+(Math.random()*7));
-        let numeroJugador = Number(document.getElementById("numero").value);
-        
+do{
+    let salarioAUX = salarioInicial
+    let numeroRandom = parseInt(1+(Math.random()*7));
+    
+    debugger
+    if(salarioInicial <= 0){
+        document.getElementById("resultados").innerHTML = "No te queda dinero";
+        break
+    }else if( salarioInicial >= 200){
+        document.getElementById("resultados").innerHTML = "Has ganado!";
+        break
+    }else{
+        let numeroJugador = Number(prompt('A cual numero quieres apostar'));
+        let apostado = Number(prompt('Cuanto quieres apostar?'));
+        if (numeroJugador == numeroRandom){
+            salarioInicial -= apostado;
+            salarioInicial += apostado*2;
+            document.getElementById("resultados").innerHTML = "Has acertado el numero tu saldo actual es "+ salarioInicial;
+        }else{
+            salarioInicial -= apostado ;
+            document.getElementById("resultados").innerHTML = "Has fallado, tu saldo actual es de "+ salarioInicial ;
+        }
     }
-}
+}while(salarioInicial > 0  && salarioInicial < 200);
