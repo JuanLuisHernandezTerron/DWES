@@ -11,12 +11,8 @@ function add(){
 
     let notaFinal = ((Number(nota1) + Number(nota2) + Number(nota3))/3);
 
-    if(notaFinal < 5){
-        document.getElementById("resultado").innerHTML = "Suspenso";
-    }else if(notaFinal >= 5 && notaFinal <= 7){
-        document.getElementById("resultado").innerHTML = "Superado";
-    }else{
-        document.getElementById("resultado").innerHTML = "Promocionado";
-    }
+    (notaFinal < 5) ? document.getElementById("resultado").innerHTML = "Suspenso" :
+    (notaFinal >= 5 && notaFinal <= 7) ? document.getElementById("resultado").innerHTML = "Superado" :
+    document.getElementById("resultado").innerHTML = "promociona";
 }
 

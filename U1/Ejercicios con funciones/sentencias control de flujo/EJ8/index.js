@@ -4,12 +4,10 @@
 
 function add(){
     let nombre = document.getElementById("nombre").value;
-    let edad = document.getElementById("edad").value;
-
+    let edad = Number(document.getElementById("edad").value);
     let diasVividos = Number(edad) * 365;
-    if(Number(edad) >= 18){
-     document.getElementById("resultado").innerHTML = "Hola "+ nombre + ", eres mayor de edad, has vivido "+ diasVividos + " dias";
-    }else{
+
+    (edad >= 18) ? document.getElementById("resultado").innerHTML = "Hola "+ nombre + ", eres mayor de edad, has vivido "+ diasVividos + " dias" :
     document.getElementById("resultado").innerHTML = "Hola "+ nombre + ", eres menor de edad, has vivido "+ diasVividos + " dias";
-    }
+
 }
