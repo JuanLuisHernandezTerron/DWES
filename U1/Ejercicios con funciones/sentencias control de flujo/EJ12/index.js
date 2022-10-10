@@ -3,5 +3,5 @@
 
 function add(){
     let numero = document.getElementById("numero").value;
-   var numero1 = Number(numero) % 2 == 0? document.getElementById("resultado").innerHTML = "Es par" : document.getElementById("resultado").innerHTML = "Es Impar"; 
+   var numero1 = Number(numero) % 2 == 0 ? document.getElementById("resultado").innerHTML = "Es par" : document.getElementById("resultado").innerHTML = "Es Impar"; 
 }

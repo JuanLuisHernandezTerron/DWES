@@ -7,7 +7,7 @@ function add(){
     let numero3 = Number(document.getElementById("numero3").value);
 
     (numero1 > numero2 && numero1 > numero3) ? document.getElementById("resultado").innerHTML = "El numero mayor es "+numero1 :
-    (numero2 > numero1 && numero2 > numero3) ? document.getElementById("resultado").innerHTML = "El numero mayor es "+numero2 : 
+    (numero2 > numero1 && numero2 > numero3) ? document.getElementById("resultado").innerHTML = "El numero mayor es "+numero2 :
     document.getElementById("resultado").innerHTML = "El numero mayor es "+numero3;
 
 }
