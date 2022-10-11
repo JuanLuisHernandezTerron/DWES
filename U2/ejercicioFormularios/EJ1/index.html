@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
@@ -12,7 +13,21 @@
             <legend>
                 <p>Registro</p>  
             </legend>
-        </fieldset>
+        <div>
+            <label for="nomnbre">DNI</label>
+                <input type="text" id="nombre" required><br>
+            <label for="email">E-mail</label>
+                <input type="text" id="email" required><br>
+            <label for="apellidos">Apellidos</label>
+                <input type="text" id="apellidos" required><br>
+            <label for="telefono">Telefono</label>
+                <input type="text" id="telefono" required><br>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Escriba aquí, por favor"></textarea><br>
+            <label for="hora">Eliga una hora</label>
+                <input type="datetime" name="" id="" required><br>
+            <input type="button" value="EnviarFormulario" onclick="add()">
+        </div>
+    </fieldset>
     </form>
 </body>
 </html>

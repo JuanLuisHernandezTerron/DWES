@@ -39,8 +39,7 @@ function registrarUser() {
     }
 
     function isValidName(name) {
-        const validacion =
-        /^(([\wáéíóúÁÉÍÓÚ]+)|([\wáéíóúÁÉÍÓÚ]+\s[\wáéíóúÁÉÍÓÚ]+))$/;
+        const validacion = /^(([\wáéíóúÁÉÍÓÚ]+)|([\wáéíóúÁÉÍÓÚ]+\s[\wáéíóúÁÉÍÓÚ]+))$/;
         return validacion.test(name);
     }
 
