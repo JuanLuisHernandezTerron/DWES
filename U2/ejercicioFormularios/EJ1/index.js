@@ -16,18 +16,34 @@ function add(){
         const telefono = $TELEFONO.value;
         const horario = $HORARIO.value;
         const comentarios = $COMENTARIOS.value;
-        
-        (dni == false || isValidDNI(dni) == false) ? alert("Has introducido mal el DNI, el formato correcto es 55555555-X"):
-        (nombre == false || isValidNombre(nombre) == false) ? alert("Has introducido mal el nombre, introduce por lo menos un nombre o como máximo 2"):
-        (apellidos == false || isValidApellidos(apellidos) == false) ? alert("Has introducido mal los apellidos, tienes que introducir como minimo 1 o como máximo 2"):
-        (telefono == false || isValidTelefono(telefono) == false) ? alert("Has introducido mal los telefono, tienes que introducir +99 999999999") : 
-        (horario == false || isValidHorario(horario) == false) ? alert("Has introducido mal la hora, mira que no se pase de las 24 horas"):
-        alert("No has realizado bien el formulario");
 
-        var newUser = {dni : dni, nombre : nombre, apellidos : apellidos, telefono : telefono, horario : horario, comentarios : comentarios};
-        console.log(newUser);
-        var user = JSON.stringify(newUser);
-        console.log(user);
+        debugger
+
+        if(dni == false || isValidDNI(dni) == false){
+            alert("Has introducido mal el DNI, el formato correcto es 55555555-X")
+        }else{
+            if((nombre == false || isValidNombre(nombre) == false)){
+                alert("Has introducido mal el nombre, introduce por lo menos un nombre o como máximo 2")
+            }else{
+                if((apellidos == false || isValidApellidos(apellidos) == false)){
+                    alert("Has introducido mal los apellidos, tienes que introducir 1 o 2 apellidos")
+                }else{
+                    if(telefono == false || isValidTelefono(telefono) == false){
+                        alert("Has introducido mal los telefono, tienes que introducir +99 999999999")
+                    }else{
+                        if(horario == false || isValidHorario(horario) == false){
+                            alert("Has introducido mal la hora, mira que no se pase de las 24 horas")
+                        }else{
+                            var newUser = {dni : dni, nombre : nombre, apellidos : apellidos, telefono : telefono, horario : horario, comentarios : comentarios};
+                            console.log(newUser);
+                            var user = JSON.stringify(newUser);
+                            console.log(user);
+                        }
+                    }
+                }
+            }
+        }
+      
     }
 
     function isValidHorario(horario){
@@ -41,7 +57,7 @@ function add(){
     }
 
     function isValidApellidos(apellidos){
-        const validacion = /^[a-z]+$|^[a-z]+\s[a-z]+$/;
+        const validacion = /^[a-z]+$|^[a-z]+\s[a-z]+$/i;
         return validacion.test(apellidos);
     }
 
