@@ -6,8 +6,7 @@ function add(){
     const $TELEFONO = document.getElementById("telefono");
     const $HORARIO = document.getElementById("horarios");
     const $COMENTARIOS = document.getElementById("comentarios");
-
-
+    
     function handleSubmit(e){
         e.preventDefault();
         const form = $FORM.value;

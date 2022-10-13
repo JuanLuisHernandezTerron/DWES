@@ -5,28 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="index.js">
+    <script src="index.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <form action="" id="formulario">
+    <form id="formulario" action="">
         <fieldset>
             <legend>
                 <p>Formulario Personal</p>
             </legend>
             <div>
                 <label for="nombre">Escribe tu nombre</label>
-                    <input type="text" id="nombre"><br>
+                    <input type="text" id="nombre" required><br>
                 <label for="apellidos">Escribe tus apellidos</label>
-                    <input type="text" id="apellidos"><br>
+                    <input type="text" id="apellidos" required><br>
                 <label for="email">Escribe tu correo</label>
-                    <input type="text" placeholder="example@example.com"> <br>
+                    <input type="email" id="correo" placeholder="example@example.com" required> <br>
                 <label for="">Web Personal</label>
-                    <input type="text" id="webPersonal" placeholder="https://example.com"> <br>
+                    <input type="text" id="webPersonal" placeholder="https://example.com" required> <br>
                 <button type="submit" value="EnviarFormulario" onclick="add()">EnviarFormulario</button>
             </div>
         </fieldset>
-
+        
     </form>
 </body>
 </html>

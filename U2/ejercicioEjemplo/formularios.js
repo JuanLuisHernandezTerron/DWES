@@ -34,7 +34,7 @@ function registrarUser() {
             comentario:comentario, password:password};
 
             console.log(regUsuario);
-            var newUser = JSON.stringify(regUsuario);
+            var newUser = JSON.stringify(regUsuario); //Convertidor a JSON
             console.log(newUser);
     }
 
