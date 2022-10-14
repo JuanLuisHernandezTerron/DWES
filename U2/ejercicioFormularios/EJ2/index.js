@@ -3,7 +3,7 @@
     const $NOMBRE = document.getElementById("nombre");
     const $APELLIDOS = document.getElementById("apellidos");
     const $CORREO = document.getElementById("correo");
-    const $WEBPersonal = document.getElementById("webPersonal").value;
+    const $WEBPersonal = document.getElementById("webPersonal");
 
     function handleSubmit(e){
         e.preventDefault();
@@ -35,7 +35,7 @@
     }
 
     function isValidWebPersonal(paginaWeb){
-        const validacion = /^[htp]{4}\:\/\/[w]{4}\.[a-zA-Z]{4}\.[a-zA-Z]{3}$/;
+        const validacion = /^[htp]{4}\:\/\/[w]{4}\.[a-zA-Z]+\.[a-zA-Z]{3}$/;
         return validacion.test(paginaWeb);
     }
 
