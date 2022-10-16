@@ -1,3 +1,24 @@
 form{
-    width: 30%;
+    width: 20%;
+}
+
+
+input{
+    margin-top: 2%;
+    padding: 1%;
+}
+
+input:hover{
+    background-color: rgb(170, 168, 168);
+}
+
+label:hover{
+    color: rgba(250, 4, 4, 0.575);
+}
+
+fieldset{
+    border-top-left-radius: 3%;
+    border-top-right-radius: 3%;
+    border-bottom-left-radius: 3%;
+    border-bottom-right-radius: 3%;
 }
