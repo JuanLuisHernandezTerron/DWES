@@ -16,6 +16,8 @@ function handleSubmit(e){
      const numeroCuenta = $numeroCuenta.value;
      var es_Validado = new Boolean(true);
 
+     debugger
+
     if(fechaCreacion == false || isValidFechaCreacion(fechaCreacion) == false){
         alert("La fecha ha sido mal introdcidad")
         es_Validado = false;
@@ -45,21 +47,67 @@ function handleSubmit(e){
         alert("La cuenta está mal escrito")
         es_Validado = false;
     }
+
+    if(es_Validado == true){
+        var NewBolsas = {fechaCreacionBolsa : fechaCreacion, cocineroBolsa : cocinero, destinarioBolsa : destinario, gramosBolsa : gramos, composicionBolsa: composicion, numeroCuenta: numeroCuenta};
+        console.log(NewBolsas);
+        var newbolsa = JSON.stringify(NewBolsas);
+        console.log(newbolsa);
+    }
 }
 
 function isValidNumeroCuenta(numeroCuenta) {
-    let mapaVocabulario = {A: 1, B: 2, C: 3, D: 4, E: 5, F: 6, G: 7, H: 8, I: 9,J: 10, K: 11, L: 12, M: 13, N: 14, O: 15, P: 15, Q: 16, R: 17, S: 18, T: 19, U: 20, V: 21, W: 22, X: 23, Y: 24, Z: 25};
+    let mapaVocabulario = {A: 1, B: 2, C: 3, D: 4, E: 5, F: 6, G: 7, H: 8, I: 9,J: 10, K: 11, L: 12, M: 13, N: 14, O: 15, P: 16, Q: 17, R: 18, S: 19, T: 20, U: 21, V: 22, W: 23, X: 24, Y: 25, Z: 26};
+    let valorLetra1 = Number(mapaVocabulario[numeroCuenta.slice(0,1)]);
+    let valorLetra2 = Number(mapaVocabulario[numeroCuenta.slice(1,2)]);
+    debugger
+    
+    var es_valido = Boolean(true);
+
+    sumaLetras = valorLetra1 + valorLetra2;
+    sumaLetras2 = Number(mapaVocabulario[numeroCuenta.slice(0,1)]) + Number(mapaVocabulario[numeroCuenta.slice(1,2)]);
+    let suma3 = 0;
+    let suma4 = 0;
+    let primerDigito = numeroCuenta.slice(numeroCuenta.lenght-2 ,numeroCuenta.lenght-1);
+    let segundoDigito = numeroCuenta.slice(numeroCuenta.lenght-1 ,numeroCuenta.lenght);
+
+    if (sumaLetras != sumaLetras2) {
+        es_valido = false;
+    }else{
+        alert("Las sumas de las letras no son iguales")
+    }
+    
+    for (let index = 0; index < mapaVocabulario.lenth; index++) {
+        if(index >4 && index <=6){
+            suma3 += Number(mapaVocabulario[numeroCuenta.slice(index,index+1)])
+        }
+    }
+
+    suma3 = Number(suma3/6);
+    suma4 = Number(suma4/6);
+
+    for (let index = 0; index < mapaVocabulario.lenth; index++) {
+        if(index >6 && index <=12){
+            suma4 += Number(mapaVocabulario[numeroCuenta.slice(index,index+1)])
+        }
+    }
+
+    if(es_valido && primerDigito === suma3 && segundoDigito === suma4){
+        const validacion = /^[A-Z]{2}\d{2}\-\d{12}\-\d{2}$/
+        return validacion.test(numeroCuenta);
+    }
 }
 
 function isValidComposicion(composicion) {
-    const numeroCuenta = $numeroCuenta.value;
-    const validacion = /^numeroCuenta[g][A-Z]{1,2}\d{0,1}[A-Z]{1,2}\d{0,1}$/;
+    const gramos = $gramos.value;
+    const validacion = /^gramos[g][A-Z]{1,2}\d{0,1}[A-Z]{1,2}\d{0,1}$/;
     return validacion.test(composicion);
 }
 
 function isValidGramos(gramos){
     const validacion = /^[100-5000]{3,4}$/;
     return validacion.test(gramos);
+}
 
 function isValidDestino(destinario){
     const validacion = /^[A-Z]{2,3}\_[a-z]+\:\d{4}$/;
@@ -77,3 +125,4 @@ function isValidFechaCreacion(fechaCreacion){
     return validacion.test(fechaCreacion);
 }
 
+$FORM.addEventListener('submit',handleSubmit)
