@@ -30,7 +30,6 @@ function deleteCookie(cname){
 }
 
 function getCookie(cname) {
-    
     let name = cname + "=";
     let ca = document.cookie.split(";"); // Guarda en un array los nombre y valores de la cookie
     for (let index = 0; index < ca.length; index++) { //Recorremos el array
