@@ -52,6 +52,26 @@ function handleSubmit(e){
         console.log(newUser);
         var usuarioRegistrado = JSON.stringify(newUser);
         console.log(usuarioRegistrado);
+
+        sessionStorage.setItem("dni",dni);
+        sessionStorage.setItem("nombre",nombre);
+        sessionStorage.setItem("fechaNacimiento",fechaNacimiento);
+        sessionStorage.setItem("email",email);
+        sessionStorage.setItem("webpersonal",webPersonal);
+        sessionStorage.setItem("contraseña",contraseña);
+    }
+}
+
+function recargarClick(){
+    if(sessionStorage.dni != undefined && sessionStorage.nombre != undefined || sessionStorage.fechaNacimiento != undefined || sessionStorage.email != undefined || sessionStorage.webPersonal != undefined || sessionStorage.contraseña != undefined) {
+        document.getElementById("dni").value = sessionStorage.getItem("dni");
+        document.getElementById("nombre").value = sessionStorage.getItem("nombre");
+        document.getElementById("fechaNacimiento").value = sessionStorage.getItem("fechaNacimiento");
+        document.getElementById("email").value = sessionStorage.getItem("email");
+        document.getElementById("webpersonal").value = sessionStorage.getItem("webpersonal");
+        document.getElementById("contraseña").value = sessionStorage.getItem("contraseña");
+    } else {
+        alert("Has introduido mal los datos");
     }
 }
 
