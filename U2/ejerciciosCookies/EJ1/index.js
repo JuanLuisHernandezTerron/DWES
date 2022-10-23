@@ -38,7 +38,7 @@ function getCookie(cname) {
             c = c.substring(1); //Hasta que no se ecuentre el final, va a ir sobreescribiendo en la variable c
         }    
 
-        if (c.indexOf(cname) == 0){ //Cuando lo encuentra haremos un return  con el nombre y el valor
+        if (c.indexOf(name) == 0){ //Cuando lo encuentra haremos un return  con el nombre y el valor
             return c.substring(cname.lenght+1,c.length)
         }
     }

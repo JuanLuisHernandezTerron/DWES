@@ -52,9 +52,7 @@ function handleSubmit(e){
         console.log(newUser);
         var usuarioRegistrado = JSON.stringify(newUser);
         console.log(usuarioRegistrado);
-
         
-
         sessionStorage.setItem("dni",dni);
         sessionStorage.setItem("nombre",nombre);
         sessionStorage.setItem("fechaNacimiento",fechaNacimiento);

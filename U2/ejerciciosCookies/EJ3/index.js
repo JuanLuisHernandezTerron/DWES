@@ -37,7 +37,7 @@
 
     function guardarCookies(cNombre,cApellidos,cEmail){
         let dia = new Date();
-        dia.setTime(dia.getTime() + 1 + 60 * 60 *24 * 1000);
+        dia.setTime(dia.getTime() + 1 *60 * 60 *24 * 1000);
         let expires = dia.toUTCString();
         document.cookie = "Usuario"+"="+cNombre+" "+cApellidos+";"+"Expires"+"="+expires;
         document.cookie= "Email"+"="+cEmail+";"+"Expires"+"="+expires;

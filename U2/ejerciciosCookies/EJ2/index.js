@@ -19,8 +19,6 @@ function add(){
         const horario = $HORARIO.value;
         const comentarios = $COMENTARIOS.value;
 
-        debugger
-
         if(dni == false || isValidDNI(dni) == false){
             alert("Has introducido mal el DNI, el formato correcto es 55555555-X");
             fallado = true;
