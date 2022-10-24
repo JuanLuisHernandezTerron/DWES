@@ -117,3 +117,21 @@ function isValidContrasena(contrasena) {
 
 $FORM.addEventListener('submit',hadleSubmit)
 
+/*
+    Otra Forma de recorrer una cookie(Sirve para sacar un nombre si passa por parametro un valor)
+
+    let cname = prompt("¿Que quieres consultar?")
+    let cookieSeparator = document.cookie.split(";")
+    let nombreValor = ""
+    for (let index = 0; index < cookieSeparator.length; index++) {
+        let separadorAUX = cookieSeparator[index].split("=")
+        for (let index = 0; index < separadorAUX.length; index++) {
+            if (separadorAUX[index].trim() === cname) {
+                nombreValor = separadorAUX[index + 1]
+                break;
+            }
+        }
+    }
+
+*/ 
+
