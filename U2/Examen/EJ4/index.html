@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="./index.js"></script>
+</head>
+<body>
+    <form id="formulario">
+        <label>DNI</label>
+            <input type="text" id="dni" required><br>
+        <label>Nombre/Apellidos</label>
+            <input type="text" id="nombre" required><br>
+        <label for="">Fecha Cita</label>
+            <input type="text" id="fechaCita" required><br>
+        <label for="">Hora cita</label>
+            <input type="time" id="hora" required><br>
+        <label for="">Medio Confirmación</label>
+        <label for="">email</label>
+            <input name="media" type="checkbox" id="checkbox1">
+        <label for="">telefono</label>
+            <input name="media" type="checkbox" id="checkbox2">
+        <input type="text" placeholder="Introduce telefono/email" id="inputConfirmacion" required><br>
+        <input type="submit" value="Enviar Formulario">
+        <input type="submit" value="recargarInfo" onclick="recargarInfo()">
+    </form>
+</body>
+</html>
