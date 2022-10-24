@@ -54,18 +54,24 @@ function hadleSubmit(e) {
         console.log(NewUser);
         var UserNew = JSON.stringify(NewUser);
         console.log(UserNew);
-        localStorage.setItem("Nombre", JSON.stringify(NewUser.NombreUsu));
-        localStorage.setItem("Apellidos", JSON.stringify(NewUser.ApellidosUsu));
-        localStorage.setItem("Hora", JSON.stringify(NewUser.HoraUsu));
-        localStorage.setItem("FechaUsu", JSON.stringify(NewUser.FechaUsu));
-        localStorage.setItem("CodigoPostal", JSON.stringify(NewUser.CodigoPostalUsu));
-        localStorage.setItem("Contraseña", JSON.stringify(NewUser.ContrasenaUSU));
+        localStorage.setItem("usuario",UserNew);
     }
     alert(devolverDato());
 }
 
 function devolverDato() {
-    return JSON.parse(localStorage.getItem(prompt("Que dato quieres sacar?"))) //Con sessionStorage es igual;
+    let usuario = JSON.parse(localStorage.getItem("usuario")); //Con sessionStorage es igual;
+    return usuario[prompt("Que valor quieres sacar?")]
+}
+
+function recargarDatos() {
+    let usuario = JSON.parse(localStorage.getItem("usuario")); //Con sessionStorage es igual;
+    $NOMBRE.value = usuario["NombreUsu"];
+    $APELLIDOS.value = usuario["ApellidosUsu"];
+    $HORA.value = usuario["HoraUsu"];
+    $FECHA.value = usuario["FechaUsu"];
+    $CODIGOPOSTAL.value = usuario["CodigoPostalUsu"];
+    $CONTRASEÑA.value = usuario["ContrasenaUSU"];
 }
 
 function isValidNombre(nombre) {
