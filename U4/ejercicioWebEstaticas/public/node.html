@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/img/1200px-Node.js_logo.svg.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/stylesNode.css">
+    <title>NODE JS</title>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>NODE JS</h1>
+            <h3><a href="./index.html">Volver Main</a></h3>
+        </header>
+        <main>
+            <h3>¿QUE ES NODE?</h3>
+            <div class="info1">
+                <div class="div-imgNode">
+                    <img class="imgNode" src="./assets/img/1_42aKSdKAWZ3VtqT5ICd82w.png" alt="" srcset="">
+                </div>
+                <div class="div-infoNode">
+                    <p>
+                        Node es un “reproductor” que abre documentos escritos en el lenguaje JavaScript y
+                        “reproduce” (ejecuta) su contenido paso a paso. Existen módulos de Node (instalables) que extienden sus funcionalidades, como
+                        “electron-packager” que nos permite empaquetar programas para que puedan ser ejecutados de manera independiente, permitiéndonos crear nuestras propias aplicaciones de escritorio.
+                    </p>
+                </div>
+            </div>
+            <hr class ="linea-1">
+            <h3>Como Instalar Node</h3>
+            <div class="info2">
+                <div class="div-infoNode">
+                    <p>
+                        La instalación de Node es sencilla utilizando el paquete de instalación disponible en el sitio web oficial de NodeJS: https://nodejs.org/en/
+                        Descargar el instalador del sitio web Ejecutar el instalador, seguir los pasos del instalador.
+                        Reiniciar tu máquina Probar NodeJS desde el terminal, viendo su versión usando el siguiente comando: node -v
+                    </p>
+                </div>
+                <div class="div-imgNode-2">
+                    <img class="imgNode2" src="./assets/img/version.PNG" alt="" srcset="">
+                </div>
+            </div>
+            <hr class ="linea-1">
+            <h3>Como crear nuestro primer servidor Node</h3>
+            <div class="info2">
+                <div class="div-imgNode-2">
+                    <img class="imgNode2" src="./assets/img/node1.PNG" alt="" srcset="">
+                </div>
+                <div class="div-infoNode">
+                    <p>
+                        1º Importamos el módulo http, donde posteriormente crearemos un servidor con una función con dos parámetros:<br>
+                        - req: Es una patición.<br>
+                        - res: Es la respuesta.<br>
+                        2º Escribimos la cabecera con la petición con el código estado 200, ponemos el tipo de contenido que será, en este caso "text/plan".<br>
+                        3º Como respuesta, enviamos un "Hola Mundo"!<br>
+                        4º Escucharemos("server.listen") por el puerto, en este caso 8080.
+                    </p>
+                </div>
+            </div>
+            <hr class ="linea-1">
+            <h3>Como iniciar nuestro servidor node</h3>
+            <div class="info2">
+                <div class="div-infoNode">
+                    <p>
+                        Para poder iniciar nuestro servidor node, tendremos que:<br>
+                            1- Abrir nueva terminal<br>
+                            2- Entrar en el mismo repositorio donde esta el "app.js".<br>
+                            3- Insertar en la terminal "node .\'nombreArchivo'.js"<br>
+                            4- A disfrutar del servidor NODE!!.
+                    </p>
+                </div>
+                <div class="div-imgNode-2">
+                    <img class="imgNode4" src="./assets/img/iniciarNode.PNG" alt="" srcset="">
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

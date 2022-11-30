@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/img/node-js-736399_960_720-2.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/stylesNode.css">
+    <title>Node Express</title>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>EXPRESS JS</h1>
+            <h3><a href="./index.html">Volver Main</a></h3>
+        </header>
+        <main>
+            <h3>¿Que es Express?</h3>
+            <div class="info1">
+                <div class="div-imgNode">
+                    <img class="imgNode" src="./assets/img/node-js-736399_960_720-2.png" alt="" srcset="">
+                </div>
+                <div class="div-infoNode">
+                    <p>
+                        Express.js es un framework de Node.js podremos instalarlo como un paquete en el directorio de nuestro proyecto.<br>
+                        Es también de código abierto y con licencia MIT, su primera versión fue lanzada en 2010
+                    </p>
+                </div>
+            </div>
+            <hr class ="linea-1">
+            <h3>Como Instalar Express</h3>
+            <div class="info2">
+                <div class="div-infoNode">
+                    <p>
+                        Podremos instalarlo como un paquete en el directorio de nuestro proyecto.<br>
+                        npm init ó npm init --yes.<br>
+                        Se nos generará un paquete llamado "package.json", nuestro proyecto Node.js está creado correctamente, para finalizar utilizaremos el comando npm install express --save 
+                        para instalar el paquete EXPRESS.<br>
+                        Utilizamos "--save", para salvar esa dependencia en nuestro "package.json" de forma explicita.
+                    </p>
+                </div>
+                <div class="div-imgNode-2">
+                    <img class="imgNode2" src="./assets/img/express1.PNG" alt="" srcset="">
+                </div>
+            </div>
+            <hr class ="linea-1">
+            <h3>Como crear nuestra primera app en Express</h3>
+            <div class="info2">
+                <div class="div-imgNode-2">
+                    <img class="imgNodeapp" src="./assets/img/expressAPP.PNG" alt="" srcset="">
+                </div>
+                <div class="div-infoNode">
+                    <p>
+                        1º Creamos una const donde guardaremos las librerias de express.<br>
+                        2º Creamos otra constante donde guardaremos en la variable "app", las librerias de express.<br>
+                        3º Creamos en otra constante el puerto donde vamos a querer que se redireccione y podramos utilizarlo en la web. <br>
+                        4º Con la variable app, utilizaremos el metodo get, donde pasaremos por parametro la petición, y la respuesta,cuando entre a la web nos mostrara el mensaje que se visualiza en la imagen. <br>
+                        5º Volvemos a utilizar la variable app con el método get, cuando introduzacamos en la url la siguiente informacion "http://localhost:8080/'textoEjemplo'", como respuesta enviaremos la siguiente informacion en formato JSON.<br>
+                        6º Para finalizar pondremos el puerto del servidor, y una funcion flecha donde introduzcamos por consola un mensaje de que hemos entrado en ese puerto.
+                    </p>
+                </div>
+            </div>
+            <hr class ="linea-1">
+            <h3>Como iniciar nuestro servidor node</h3>
+            <div class="info2">
+                <div class="div-infoNode">
+                    <p>
+                        Para poder iniciar nuestro servidor node, tendremos que:<br>
+                            1- Abrir nueva terminal<br>
+                            2- Entrar en el mismo repositorio donde esta el "app.js".<br>
+                            3- Insertar en la terminal "node .\'nombreArchivo'.js"<br>
+                            4- A disfrutar del framework Express!!.
+                    </p>
+                </div>
+                <div class="div-imgNode-2">
+                    <img class="imgNode4" src="./assets/img/iniciarNode.PNG" alt="" srcset="">
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+/*BODY */
+#container{
+    width: 90%;
+    margin: auto;
+}
+/*Header*/
+header{
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(187, 229, 200);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+header img{
+    justify-self: flex-end;
+    height: 90px;
+    padding-left: 90px;
+}
+/*MAIN*/
+main{
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1000px;
+background-color: rgb(221, 241, 228);
+}
+/*DIV1*/
+.div1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+}
+
+#titulo1,#titulo2{
+    width: 100%;
+    text-align: center;
+}
+
+.div1 .imagen1  img,.div2 .imagen2  img{
+    width: 30%;
+    height: 100px;
+    transition: 0.3s ease-in-out;
+}
+.imagen1,.imagen2{
+    text-align: center;
+    justify-content: center;
+}
+/*DIV2*/
+.div2{
+    grid-column: 2/2;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+}
+
+.div1 .imagen1 img:hover,.div2 .imagen2  img:hover{
+    transform: scale(1.05);
+}

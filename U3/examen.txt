@@ -1,0 +1,1 @@
+db.Curso.insertOne({_id:21,curso:"DAW2",turno:"Mañana"})
