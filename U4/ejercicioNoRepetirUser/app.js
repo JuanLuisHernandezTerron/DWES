@@ -2,7 +2,6 @@ const app = require('express')();
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended:true}));
 const puerto = 8080;
-var arrayUsuario = [];
 
 const bbdd = require("./public/BBDD.js");
 // app.use("/assets/js/");
@@ -20,9 +19,8 @@ app.post("/newUser",(req,res)=>{
         email:req.body.emaiilUser,
         telefono:req.body.telefonoUser
     };
-    arrayUsuario.push(usuario);
 
-    bbdd.validarUser(usuario.dni,arrayUsuario).then((mensajeResuelto)=>{
+    bbdd.validarUser(usuario.dni).then((mensajeResuelto)=>{
         res.render("userIngresado.ejs",{dniUser:usuario.dni,
                                         userNombre:usuario.nombre,
                                         userApellidos:usuario.apellidos,
